@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { RacketsIndex } from "./RacketsIndex";
+import { RacketsNew } from "./RacketsNew";
 
 export function RacketsPage() {
   const [rackets, setRackets] = useState([]);
@@ -19,6 +20,9 @@ export function RacketsPage() {
   useEffect(handleIndex, []);
 
   return (
+<div>
+<RacketsNew />
 <RacketsIndex rackets={rackets}/>
+</div>
   )
 }
