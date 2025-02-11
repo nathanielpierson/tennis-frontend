@@ -15,6 +15,9 @@ export function RacketsPage() {
     })
     console.log('after the .then')   
   }
+
+  useEffect(handleIndex, []);
+
   return (
 <RacketsIndex rackets={rackets}/>
   )
