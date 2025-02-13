@@ -1,4 +1,8 @@
-export function RacketsIndex({rackets}) {
+export function RacketsIndex({rackets, onShowRacket}) {
+  const handleClick = () => {
+    console.log("button clicked");
+    onShowRacket()
+  }
   return (
     <div>
       <h2>all rackets</h2>
@@ -7,6 +11,7 @@ export function RacketsIndex({rackets}) {
           <p>{racket.head_size}</p>
           <p>{racket.mass}</p>
           <p>{racket.price}</p>
+          <button onClick={handleClick}>more info</button>
         </div>
       ))}
     </div>
